@@ -1,0 +1,48 @@
+@import url(variables.css);
+
+.server-choose,
+.wotlk,
+.tbc {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.wotlk-logo,
+.tbc-logo {
+    background-size: contain;
+
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.server-choose {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), var(--choose-bg);
+}
+
+.wotlk {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), var(--wotlk);
+}
+
+.wotlk:hover {
+    background-image: var(--wotlk);
+}
+
+.wotlk-logo {
+    background-image: var(--wotlk-logo);
+    display: block;
+}
+
+.tbc:hover {
+    background-image: var(--tbc);
+}
+
+.tbc {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), var(--tbc);
+}
+
+.tbc-logo {
+    background-image: var(--tbc-logo);
+    display: block;
+}

@@ -1,0 +1,29 @@
+@import url(variables.css);
+
+@keyframes hover-anim {
+  0% {
+    transform: scaleX(0);
+    -webkit-transform: scaleX(0);
+    z-index: 10;
+  }
+
+  100% {
+    transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+    z-index: 10;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.80);
+  }
+
+  70% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0.8);
+  }
+}

@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto@1,900&display=swap');
+@import url(variables.css);
+@import url(anim.css);
+@import url(header.css);
+@import url(selector.css);
+@import url(server.css);
+@import url(imagery.css);
+@import url(server-stats.css);
+
+body,
+html {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #222;
+  margin: 0px;
+  text-align: center;
+  color: whitesmoke;
+  background: var(--main-bg) var(--main-color);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Roboto', sans-serif;
+}
+
+small {
+  display: block;
+}
+
+a {
+  color: whitesmoke;
+  text-decoration: none;
+  transition: all .2s ease-in-out;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.base {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 1fr;
+  height: 100vh;
+  margin: 0;
+}

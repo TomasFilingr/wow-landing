@@ -1,0 +1,158 @@
+@import url(variables.css);
+@import url(anim.css);
+
+.server {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    transition: all .5s ease-in-out;
+}
+
+.server:first-child {
+    box-shadow: inset -1px 0px 1px rgba(255, 255, 255, 0.2);
+}
+
+.server:hover {
+    flex-grow: 5;
+}
+
+.server .server-link {    
+    display: block;    
+    flex: 1 0 auto;
+    width: 100%;
+    transition: box-shadow .2s ease-in-out;
+    box-shadow: inset 0px 2000px rgba(255, 255, 255, 0);
+}
+
+.server .server-link a {
+    display: flex;    
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.server .server-link a > * {
+    text-shadow: 0px 0px 10px rgb(0,0,0);
+    margin-top: 10em;
+    opacity: 0;
+}
+
+.server .server-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    width: 0;
+}
+
+.server .server-info .discord {
+    height: 5em;
+    flex: 0 1 auto;
+}
+
+.server .stats,
+.server .discord {
+    transform: scaleX(0);
+    -webkit-transform: scaleX(0);
+    z-index: -1;
+}
+
+.server:hover .server-link {
+    width: 33%;
+    
+}
+.server .server-link:hover {
+    box-shadow: inset 0px 2000px rgba(255, 255, 255, 0.15);    
+}
+
+.server:hover .server-link a {
+    animation: pulse 10s infinite ease-in-out;
+}
+
+.server:hover .server-link a > * {
+    opacity: 1;
+}
+
+.server:hover .server-info {
+    width: 66%;
+}
+
+.server:hover .stats {
+    animation: hover-anim .5s forwards ease-in-out;
+    flex-grow: 2;
+}
+
+.server:hover .discord {
+    animation: hover-anim 0.5s forwards ease-in-out;
+}
+
+.server::before {
+    content: '';
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.75) 0%, rgba(255, 255, 255, 0.25) 100%);
+    box-shadow: inset 0 0 2000px rgb(0 0 0 / 50%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.server:hover::before {
+    content: '';
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%);
+}
+
+.server::after {
+    z-index: 2;
+}
+
+/* DISCORD */
+.server .discord {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .server .discord>* {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .server .discord>div:first-child {
+    transition: all 1s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3em;
+  }
+  
+  .server .discord>.discord-widget,
+  .server .discord>.discord-widget>* {
+    transition: all 1s ease-in-out;
+  }
+  
+  .server .discord>.discord-widget>img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .server .discord svg {
+    height: 30px;
+    margin: 0px 2em;
+  }
+  
+  .server .discord::before {
+    content: '';
+    box-shadow: inset 0 0 2000px rgba(30, 30, 61);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }

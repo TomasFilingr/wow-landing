@@ -1,0 +1,17 @@
+:root {
+    --main-color: #031135;
+    --main-invert: #2d0e57;
+  
+    --main-bg: url("../images/background.jpg");
+    --header-image: url("../images/bg-main.png");
+    --logo: url("../images/mw_logo_web.png");
+  
+    --choose-bg: url("../images/middle-bg.jpg");
+    --wotlk: url("../images/wotlk-img.webp");
+    --tbc: url("../images/tbc-img.webp");
+  
+    --wotlk-logo: url("../images/wotlk-logo.webp");
+    --tbc-logo: url("../images/tbc-logo.png");
+  
+    --facebook-icon: url("../images/fb-logo.webp");
+  }
