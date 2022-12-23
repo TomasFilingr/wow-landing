@@ -6,26 +6,23 @@
     display: flex;
     flex-direction: row;
     transition: all .5s ease-in-out;
+    border-radius: 6px;    
+    box-shadow: inset 0px 0px 2px rgba(255, 255, 255, 0.2);
 }
-
-.server:first-child {
-    box-shadow: inset -1px 0px 1px rgba(255, 255, 255, 0.2);
-}
-
 .server:hover {
     flex-grow: 2;
 }
 
-.server .server-link {    
-    display: block;    
+.server .server-link {
+    display: block;
     flex: 1 0 auto;
     width: 100%;
-    transition: box-shadow .2s ease-in-out;
+    transition: box-shadow .5s ease-in-out;
     box-shadow: inset 0px 2000px rgba(255, 255, 255, 0);
 }
 
 .server .server-link a {
-    display: flex;    
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
@@ -38,10 +35,30 @@
 }
 
 .server .server-info {
+    border-radius: 6px;
     display: flex;
     flex-direction: column;
     flex: 1 0 auto;
-    width: 0;
+    position: relative;
+}
+
+.server-info::after {
+    content: '';
+    width: 10px;
+    height: 100%;
+    position: absolute;
+    box-shadow: inset 1px 0px 1px rgba(255, 255, 255, 0.2);
+    z-index: 2;
+}
+
+.server:nth-child(n+2) .server-info::after {
+    content: '';
+    width: 10px;
+    height: 100%;
+    right: 0;
+    position: absolute;
+    box-shadow: inset -1px 0px 1px rgba(255, 255, 255, 0.2);
+    z-index: 2;
 }
 
 .server .server-info .discord {
@@ -51,25 +68,36 @@
 
 .server .stats,
 .server .discord {
+    margin-left: 1px; /*SHOW 1px width of white line*/
     transform: scaleX(0);
     -webkit-transform: scaleX(0);
     z-index: -1;
 }
 
+.server:nth-child(n+2) .stats,
+.server:nth-child(n+2) .discord {
+    margin-right: 1px; /*SHOW 1px width of white line*/
+}
+.server:nth-child(n+2) .discord {
+    flex-direction: row-reverse;
+}
+
 .server .server-link {
     width: 33%;
-    
+
 }
 .server .server-link:hover {
-    box-shadow: inset 0px 2000px rgba(255, 255, 255, 0.15);    
+    box-shadow: inset 0px 2000px rgba(0, 0, 0, 0.5);
 }
 
 .server .server-link a {
-    animation: pulse 10s infinite ease-in-out;
+    transform: scale(.8);
 }
-
 .server .server-link a > * {
     opacity: 1;
+}
+.server .server-link:hover a {
+    animation: pulse 2s infinite ease-in-out;
 }
 
 .server .server-info {
@@ -79,13 +107,16 @@
 .server .stats {
     animation: hover-anim .5s forwards ease-in-out;
     flex-grow: 2;
+    border-radius: 0px 6px 0px 0px;
 }
 
 .server .discord {
     animation: hover-anim 0.5s forwards ease-in-out;
+    border-radius: 0px 0px 0px 6px;
 }
 
 .server::before {
+    border-radius: 6px;
     content: '';
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.75) 0%, rgba(255, 255, 255, 0.25) 100%);
     box-shadow: inset 0 0 2000px rgb(0 0 0 / 50%);
@@ -113,13 +144,14 @@
     flex-direction: row;
     align-items: center;
     cursor: pointer;
+    padding: 0 0.5em;
   }
-  
+
   .server .discord>* {
     position: relative;
     z-index: 1;
   }
-  
+
   .server .discord>div:first-child {
     transition: all 1s ease-in-out;
     display: flex;
@@ -135,20 +167,20 @@
   .server .discord>.discord-widget>* {
     transition: all 1s ease-in-out;
   }
-  
+
   .server .discord>.discord-widget>img {
     width: 100%;
     align-self: center;
   }
-  
+
   .server .discord svg {
     height: 30px;
     margin: 0px 2em;
   }
-  
+
   .server .discord::before {
+    border-radius: 0px 0px 6px 0px;
     content: '';
-    box-shadow: inset 0 0 2000px rgba(30, 30, 61);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     width: 100%;

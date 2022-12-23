@@ -2,10 +2,9 @@
 
 .selector {
     display: flex;
-    min-width: 800px;
     justify-self: center;
     min-height: 50vh;
-    padding: 2em;
+    padding: 2em;    
 }
 
 .selector>* {
@@ -13,8 +12,47 @@
     margin: 0px 1em;
 }
 
-.server-choose {
+.server-choose {    
+    border-radius: 6px;
     display: flex;
+    flex-grow: .5;
     justify-content: center;
-    align-items: center;
+    align-items: center;    
+    box-shadow: inset 0px 0px 4px rgba(255, 255, 255, 0.2);    
+    position: relative;
+    overflow: hidden;
+}
+
+.server-choose::before {
+    transition: all .2s ease-in-out;
+    position: absolute;
+    content: '';
+    top: -75px;
+    left: -30px;
+    right: 0;
+    bottom: 0;     
+    transform: skew(45deg);
+    z-index: 1;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), var(--header-image);
+}
+.server-choose::after { 
+    background: linear-gradient(180deg, rgba(23, 5, 88, 0),
+     rgba(0,0,0,0.6));   
+    border-radius: 6px;    
+    content: '';
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.server-choose > * {    
+    z-index: 2;
+}
+
+.selector .server:hover ~ .selector .server-choose {
+    flex-grow: 0.5;
 }

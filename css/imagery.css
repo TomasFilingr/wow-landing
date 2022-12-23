@@ -18,7 +18,7 @@
 }
 
 .server-choose {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), var(--choose-bg);
+    background-image: var(--choose-bg);
 }
 
 .wotlk {
@@ -39,7 +39,7 @@
 }
 
 .tbc {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), var(--tbc);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), var(--tbc);
 }
 
 .tbc-logo {

@@ -1,7 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto@1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Nosifer&display=swap');
+
 @import url(variables.css);
 @import url(anim.css);
 @import url(header.css);
+@import url(footer.css);
 @import url(selector.css);
 @import url(server.css);
 @import url(imagery.css);
@@ -19,7 +21,7 @@ html {
   background: var(--main-bg) var(--main-color);
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Nosifer';
 }
 
 small {
