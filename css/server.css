@@ -115,6 +115,14 @@
     border-radius: 0px 0px 0px 6px;
 }
 
+.server:nth-child(n+2) .stats {
+    border-radius: 6px 0px 0px 0px;
+}
+.server:nth-child(n+2) .discord 
+{
+    border-radius: 0px 0px 0px 6px;
+}
+
 .server::before {
     border-radius: 6px;
     content: '';
@@ -179,7 +187,7 @@
   }
 
   .server .discord::before {
-    border-radius: 0px 0px 6px 0px;
+    border-radius: inherit;
     content: '';
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
