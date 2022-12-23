@@ -186,8 +186,8 @@
     margin: 0px 2em;
   }
 
-  .server .discord::before {
-    border-radius: inherit;
+  .server .discord::before {    
+    border-radius: 0px 0px 6px 0px;
     content: '';
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -199,3 +199,8 @@
     left: 0;
     z-index: 1;
   }
+
+.server:nth-child(n+2) .server .discord::before
+{
+    border-radius: 0px 0px 0px 6px;
+}
