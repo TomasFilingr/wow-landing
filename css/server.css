@@ -13,7 +13,7 @@
 }
 
 .server:hover {
-    flex-grow: 5;
+    flex-grow: 2;
 }
 
 .server .server-link {    
@@ -56,7 +56,7 @@
     z-index: -1;
 }
 
-.server:hover .server-link {
+.server .server-link {
     width: 33%;
     
 }
@@ -64,24 +64,24 @@
     box-shadow: inset 0px 2000px rgba(255, 255, 255, 0.15);    
 }
 
-.server:hover .server-link a {
+.server .server-link a {
     animation: pulse 10s infinite ease-in-out;
 }
 
-.server:hover .server-link a > * {
+.server .server-link a > * {
     opacity: 1;
 }
 
-.server:hover .server-info {
+.server .server-info {
     width: 66%;
 }
 
-.server:hover .stats {
+.server .stats {
     animation: hover-anim .5s forwards ease-in-out;
     flex-grow: 2;
 }
 
-.server:hover .discord {
+.server .discord {
     animation: hover-anim 0.5s forwards ease-in-out;
 }
 
@@ -127,7 +127,10 @@
     align-items: center;
     height: 3em;
   }
-  
+  .server .discord>.discord-widget {
+    display: flex;
+  }
+
   .server .discord>.discord-widget,
   .server .discord>.discord-widget>* {
     transition: all 1s ease-in-out;
@@ -135,7 +138,7 @@
   
   .server .discord>.discord-widget>img {
     width: 100%;
-    height: 100%;
+    align-self: center;
   }
   
   .server .discord svg {
