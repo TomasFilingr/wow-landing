@@ -1,4 +1,3 @@
-@import url(variables.css);
 @import url(anim.css);
 
 .server {
@@ -13,15 +12,24 @@
     flex-grow: 2;
 }
 
+.server:hover .stats, 
+.server:hover .discord
+{
+    animation: hover-anim .5s forwards ease-in-out;
+}
+
 .server .server-link {
-    display: block;
+    display: flex;
+    justify-content: center;
     flex: 1 0 auto;
     width: 100%;
     transition: box-shadow .5s ease-in-out;
     box-shadow: inset 0px 2000px rgba(255, 255, 255, 0);
+    border-radius: inherit;
 }
 
 .server .server-link a {
+    max-width: 350px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -42,7 +50,7 @@
     position: relative;
 }
 
-.server-info::after {
+.server-info:hover:after {
     content: '';
     width: 10px;
     height: 100%;
@@ -51,7 +59,7 @@
     z-index: 2;
 }
 
-.server:nth-child(n+2) .server-info::after {
+.server:nth-child(n+2) .server-info:hover::after {
     content: '';
     width: 10px;
     height: 100%;
@@ -83,9 +91,19 @@
 }
 
 .server .server-link {
-    width: 33%;
-
+    width: 100%;
 }
+.server .server-info {
+    width: 0%;
+}
+
+.server:hover .server-link {
+    width: 33%;
+}
+.server:hover .server-info {
+    width: 66%;
+}
+
 .server .server-link:hover {
     box-shadow: inset 0px 2000px rgba(0, 0, 0, 0.5);
 }
@@ -100,18 +118,13 @@
     animation: pulse 2s infinite ease-in-out;
 }
 
-.server .server-info {
-    width: 66%;
-}
 
-.server .stats {
-    animation: hover-anim .5s forwards ease-in-out;
+.server .stats {    
     flex-grow: 2;
     border-radius: 0px 6px 0px 0px;
 }
 
-.server .discord {
-    animation: hover-anim 0.5s forwards ease-in-out;
+.server .discord {    
     border-radius: 0px 0px 0px 6px;
 }
 

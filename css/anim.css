@@ -1,5 +1,3 @@
-@import url(variables.css);
-
 @keyframes hover-anim {
   0% {
     transform: scaleX(0);
